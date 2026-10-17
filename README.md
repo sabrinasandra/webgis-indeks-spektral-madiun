@@ -1,5 +1,3 @@
-# webgis-indeks-spektral-madiun
-WebGIS berbasis R Shiny dan Leaflet untuk visualisasi indeks spektral Sentinel-2 dan analisis statistik zonal di Kabupaten dan Kota Madiun.
 
 # WebGIS Indeks Spektral Kabupaten & Kota Madiun
 
@@ -69,6 +67,6 @@ Jalankan aplikasi melalui RStudio dengan perintah:
 
 ## Penulis
 
-Sabrina Sandra RA dan Abul Fahmi Attaftazani
+Sabrina Sandra Ramadhani Aziz dan Abul Fahmi Attaftazani
 
 Tugas Besar Pemrograman Spasial — 2026
