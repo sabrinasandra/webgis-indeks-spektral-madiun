@@ -45,15 +45,12 @@ pada 18 kecamatan di Kabupaten dan Kota Madiun.
 | NDWI | Indeks perairan |
 | NDCI | Indeks Red-NIR yang digunakan dalam kode |
 
-Catatan: NDCI dalam proyek ini merupakan negatif NDVI
-dan belum tervalidasi sebagai metode pendeteksian awan.
+
 
 ## Struktur Proyek
 
 - `app.R` : Aplikasi WebGIS Shiny
 - `tubes.R` : Pengolahan citra Sentinel-2
-- `Data/` : Data masukan
-- `output/` : Hasil pengolahan raster dan statistik
 - `docs/` : Dokumentasi dan screenshot WebGIS
 
 ## Cara Menjalankan
