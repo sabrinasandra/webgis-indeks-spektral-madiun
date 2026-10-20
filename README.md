@@ -43,7 +43,7 @@ pada 18 kecamatan di Kabupaten dan Kota Madiun.
 | NDVI | Indeks vegetasi |
 | NDBI | Indeks lahan terbangun |
 | NDWI | Indeks perairan |
-| NDCI | Indeks Red-NIR yang digunakan dalam kode |
+| NDCI | Indeks Awan |
 
 
 
