@@ -19,6 +19,25 @@ library(dplyr)
 library(DT)
 
 # ====================================
+# PALET WARNA SESUAI app.R (LEAFLET)
+# ====================================
+# Menggunakan generator warna yang sama dengan app.R,
+# bukan grDevices::hcl.colors yang memakai palet berbeda.
+buat_palet_web <- function(nama, n = 100) {
+  fungsi_warna <- leaflet::colorNumeric(
+    palette = nama,
+    domain = c(0, 1),
+    na.color = "#00000000"
+  )
+  fungsi_warna(seq(0, 1, length.out = n))
+}
+
+warna_ndvi <- buat_palet_web("YlGn")
+warna_ndbi <- buat_palet_web("YlOrRd")
+warna_ndwi <- buat_palet_web("Blues")
+
+
+# ====================================
 # 3. MENENTUKAN FOLDER
 # ====================================
 
@@ -222,7 +241,7 @@ names(NDVI) <- "NDVI"
 # Menampilkan hasil
 plot(
   NDVI,
-  col = hcl.colors(100, "YlGn"),
+  col = warna_ndvi,
   main = "Peta NDVI Kabupaten madiun"
 )
 
@@ -244,7 +263,7 @@ names(NDBI) <- "NDBI"
 
 plot(
   NDBI,
-  col = hcl.colors(100, "YlOrRd"),
+  col = warna_ndbi,
   main = "Peta NDBI Kabupaten madiun"
 )
 
@@ -265,7 +284,7 @@ names(NDWI) <- "NDWI"
 
 plot(
   NDWI,
-  col = hcl.colors(100, "Blues 3"),
+  col = warna_ndwi,
   main = "Peta NDWI Kabupaten madiun"
 )
 
@@ -324,15 +343,15 @@ png(
 par(mfrow = c(2, 2))
 
 plot(NDVI,
-     col = hcl.colors(100, "YlGn"),
+     col = warna_ndvi,
      main = "NDVI - Vegetasi")
 
 plot(NDBI,
-     col = hcl.colors(100, "YlOrRd"),
+     col = warna_ndbi,
      main = "NDBI - Terbangun")
 
 plot(NDWI,
-     col = hcl.colors(100, "Blues 3"),
+     col = warna_ndwi,
      main = "NDWI - Perairan")
 
 plot(
@@ -356,21 +375,21 @@ par(mfrow = c(2, 2))
 # Peta NDVI
 plot(
   NDVI,
-  col = hcl.colors(100, "YlGn"),
+  col = warna_ndvi,
   main = "NDVI - Vegetasi"
 )
 
 # Peta NDBI
 plot(
   NDBI,
-  col = hcl.colors(100, "YlOrRd"),
+  col = warna_ndbi,
   main = "NDBI - Bangunan"
 )
 
 # Peta NDWI
 plot(
   NDWI,
-  col = hcl.colors(100, "Blues 3"),
+  col = warna_ndwi,
   main = "NDWI - Perairan"
 )
 
